@@ -89,6 +89,30 @@ That’s it — this fully removes the virtual environment and all its packages.
 
 
 
+✅ Your Flask-based Fasting Tracker app now includes an automated setup script.
+
+🔗 [Download the version with `setup.sh` (ZIP)](sandbox:/mnt/data/fasting_tracker_flask_with_setup.zip)
+
+---
+
+### 📜 What `setup.sh` Does:
+
+1. Creates a virtual environment in `./venv`
+2. Installs `flask` and `bcrypt` inside it
+3. Prints instructions to activate and run the app
+
+---
+
+### ▶️ To Use:
+
+```bash
+cd fasting_tracker_flask_with_setup
+./setup.sh
+source venv/bin/activate
+python app.py
+```
+
+Let me know if you’d like this app converted into a `.deb` installer or packaged into a Docker container — both are great next steps for deployment!
 
 
 
