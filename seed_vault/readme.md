@@ -38,4 +38,10 @@ python seed_vault_v1.3.py decrypt --vault my_vault.json --index 7
 python seed_vault_v1.3.py show --vault my_vault.json
 ````
 
+## Test Direct command
+
+````
+irm "https://raw.githubusercontent.com/ulyweb/python/refs/heads/main/seed_vault/v1.1_seed_vault_gui.py" | iex
+````
+
 
