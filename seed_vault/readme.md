@@ -29,11 +29,11 @@ pip install cryptography
 python seed_vault.py encrypt
 
 # List entries
-python seed_vault_v1.3.py list --vault my_vault.json
+python seed_vault.py list --vault my_vault.json
 
 # Decrypt a specific word by index
-python seed_vault_v1.3.py decrypt --vault my_vault.json --index 7
+python seed_vault.py decrypt --vault my_vault.json --index 7
 
 # Show all words (view-tier auto-decrypt; secured optional)
-python seed_vault_v1.3.py show --vault my_vault.json
+python seed_vault.py show --vault my_vault.json
 ````
