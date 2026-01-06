@@ -30,7 +30,6 @@ import argparse
 import getpass
 import random
 import subprocess
-import shutil
 import importlib
 from typing import List, Dict, Any, Tuple, Set, Optional
 
@@ -49,6 +48,7 @@ def run_pip_install(pkg: str, user: bool = False, extra_args: Optional[List[str]
         cmd.append("--user")
     if extra_args:
         cmd.extend(extra_args)
+    print(f"[*] Running: {' '.join(cmd)}")
     return subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
 def ensure_pip() -> bool:
@@ -83,6 +83,7 @@ def ensure_cryptography() -> None:
         return
     except Exception:
         print("[*] 'cryptography' not found. Attempting automatic installation...")
+        print(f"    Using Python interpreter: {sys.executable}")
 
     # Step 1: Ensure pip
     if not ensure_pip():
@@ -96,14 +97,9 @@ def ensure_cryptography() -> None:
     # Step 2: Try install (system)
     proc = run_pip_install("cryptography", user=False, extra_args=["--quiet"])
     if proc.returncode != 0:
-        # Check if permission denied
-        if "Permission denied" in proc.stderr or "not writable" in proc.stderr or "requires administrator" in proc.stderr:
-            print("[*] System install failed due to permissions. Retrying with '--user'...")
-            proc = run_pip_install("cryptography", user=True, extra_args=["--quiet"])
-        else:
-            # Try user anyway
-            print("[*] Initial install failed. Retrying with '--user'...")
-            proc = run_pip_install("cryptography", user=True, extra_args=["--quiet"])
+        # Permission hints: common messages vary; try user anyway.
+        print("[*] System-level install failed. Retrying with '--user' ...")
+        proc = run_pip_install("cryptography", user=True, extra_args=["--quiet"])
 
     if proc.returncode != 0:
         print("\n[!] Automatic installation failed.")
@@ -552,4 +548,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-``
