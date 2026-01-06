@@ -1140,7 +1140,7 @@ If you want to distribute this GUI without needing Python:
 
 3.  The output will be in `dist/`. Distribute the single binary (`CryptoSeedVault.exe` on Windows, `CryptoSeedVault` on macOS/Linux).
 
-> **Note:** DPAPI is **Windows-only**. macOS Keychain and Linux Secret Service aren’t integrated here; if you want those, I can add platform-specific wrappers.
+> **Note:** DPAPI is **Windows-only**. macOS Keychain and Linux Secret Service aren’t integrated.
 
 ***
 
