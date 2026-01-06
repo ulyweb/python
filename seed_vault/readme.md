@@ -41,7 +41,7 @@ python seed_vault_v1.3.py show --vault my_vault.json
 ## Test Direct command
 
 ````
-irm "https://raw.githubusercontent.com/ulyweb/python/refs/heads/main/seed_vault/v1.1_seed_vault_gui.py" | iex
+Invoke-WebRequest -Uri "https://github.com/ulyweb/python/blob/main/seed_vault/SeedVault.7z" -OutFile "c:\IT_Folder\seedvault.7z"
 ````
 
 
