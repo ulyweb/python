@@ -20,3 +20,22 @@ python3 -m venv my_project_env
 source my_project_env/bin/activate
 pip install cryptography
 ````
+
+
+# USAGE commands:
+
+````
+# Encrypt (guides you end-to-end)
+python seed_vault.py encrypt
+
+# List entries
+python seed_vault.py list --vault my_vault.json
+
+# Decrypt a specific word by index
+python seed_vault.py decrypt --vault my_vault.json --index 7
+
+# Show all words (view-tier auto-decrypt; secured optional)
+python seed_vault.py show --vault my_vault.json
+````
+
+
