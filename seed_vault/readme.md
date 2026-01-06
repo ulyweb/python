@@ -37,11 +37,3 @@ python seed_vault_v1.3.py decrypt --vault my_vault.json --index 7
 # Show all words (view-tier auto-decrypt; secured optional)
 python seed_vault_v1.3.py show --vault my_vault.json
 ````
-
-## Test Direct command
-
-````
-Invoke-WebRequest -Uri "https://github.com/ulyweb/python/blob/main/seed_vault/SeedVault.7z" -OutFile "c:\IT_Folder\seedvault.7z"
-````
-
-
