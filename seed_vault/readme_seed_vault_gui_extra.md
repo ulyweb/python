@@ -1,4 +1,4 @@
-Here’s a **full GUI upgrade** with all the extras you requested:
+Here’s a **full GUI upgrade** with all the extras:
 
 *   ✅ **Auto‑install of `cryptography`** if missing
 *   ✅ **Require master PIN (non-empty)**
