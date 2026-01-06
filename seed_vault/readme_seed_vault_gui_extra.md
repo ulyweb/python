@@ -1150,21 +1150,10 @@ If you want to distribute this GUI without needing Python:
     *   Windows: `%LOCALAPPDATA%\SeedVault\seedvault_audit.log`
     *   macOS/Linux: `~/.seedvault/seedvault_audit.log`
 
-Each line is a JSON object like:
-
-```json
-{"ts":1736120000,"type":"decrypt-secured","index":7,"success":true,"message":"ok","vault":"C:\\path\\vault.json"}
-```
 
 No plaintext seed words are logged.
 
 ***
 
-## KDF Hardness Guidance
 
-*   `log2(N)` ≈ **15 (32768)** is a balanced default for desktops.
-*   For higher security on powerful machines, consider **16–18**.
-*   `r=8, p=2` are good defaults. Increasing `p` raises parallelization and memory cost.
-
-***
 
