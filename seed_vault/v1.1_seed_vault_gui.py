@@ -323,7 +323,7 @@ class CodesDialog(tk.Toplevel):
 class SeedVaultApp(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("CryptoSeed Vault (GUI)")
+        self.title("CryptoSeed Vault")
         self.geometry("940x720")
 
         # Rate limiter
