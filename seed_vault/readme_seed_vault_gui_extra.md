@@ -1168,13 +1168,3 @@ No plaintext seed words are logged.
 
 ***
 
-## Want more?
-
-I can add:
-
-*   **KDF presets** (Laptop / Desktop / Server) and **estimated cost** indicator.
-*   **Shamir Secret Sharing** for vault splitting.
-*   **Signed releases** and **auto-updater**.
-*   **CLI mode toggle** inside GUI (to generate a matching CLI vault).
-
-How does this look? If you hit any issues or want the **PowerShell** version with similar UX, I’ll port these features next.
