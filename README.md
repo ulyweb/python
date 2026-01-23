@@ -112,7 +112,11 @@ source venv/bin/activate
 python app.py
 ```
 
-Let me know if you’d like this app converted into a `.deb` installer or packaged into a Docker container — both are great next steps for deployment!
+## QwenLM Qwen3-TTS to try on.
+
+```
+https://github.com/QwenLM/Qwen3-TTS
+```
 
 
 
